@@ -7,5 +7,7 @@ require 'model/post.php';
 // Controllers
 require 'controller/guestBookController.php';
 
+session_start();
+
 $controller = new guestBookController();
 $controller->render($_GET, $_POST);

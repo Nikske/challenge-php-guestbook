@@ -12,13 +12,13 @@
             <h1>Guest book</h1>
             <form method="post">
                 <div class="form-group">
-                    <label for="inputName">Your name:</label>
-                    <input type="text" class="form-control" id="inputName">
-                    <label for="inputTitle">Title:s</label>
-                    <input type="text" class="form-control" id="inputTitle">
+                    <label for="inputTitle">Title:</label>
+                    <input type="text" class="form-control" id="inputTitle" name="inputTitle">
 
                     <label for="content">Leave a message:</label>
-                    <textarea class="form-control" id="content" rows="3"></textarea>
+                    <textarea class="form-control" id="inputContent" name="inputContent" rows="3"></textarea>
+                    <label for="inputName">Your name:</label>
+                    <input type="text" class="form-control" id="inputName" name="inputName">
                 </div>
                 <button type="submit" class="btn btn-primary">i maek post</button>
             </form>
