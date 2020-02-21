@@ -29,4 +29,9 @@ class post {
     public function getAuthorName(): string {
         return $this->authorName;
     }
+
+    public function getInfo() {
+        $allInfo = ['Title' => $this->getTitle(), 'Date' => $this->getDate(), 'Content' => $this->getContent(), 'Author name' => $this->getAuthorName()];
+        return $allInfo;
+    }
 }
