@@ -14,6 +14,7 @@ class guestBookController {
         }
         require 'view/homepage.php';
     }
+
     private function insert() {
         $inputTitle = htmlspecialchars($_POST['inputTitle']);
         $inputDate = date('l jS \of F Y');
@@ -21,11 +22,11 @@ class guestBookController {
         $inputName = htmlspecialchars($_POST['inputName']);
 
         $aPost = new post($inputTitle, $inputDate, $inputContent, $inputName);
-        var_dump($aPost);
+        //var_dump($aPost);
 
-        $postData = json_encode($aPost->getInfo());
-        echo $postData;
-        file_put_contents('data/posts.json', $postData);
+        $guestBook = new guestBook();
+        $guestBook->pushPost($aPost->getInfo());
+
     }
 
 }
