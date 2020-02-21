@@ -25,7 +25,10 @@ class guestBookController {
         //var_dump($aPost);
 
         $guestBook = new guestBook();
+        $guestBook->loadPosts();
         $guestBook->pushPost($aPost->getInfo());
+
+        var_dump($guestBook->getAllPosts());
 
     }
 
