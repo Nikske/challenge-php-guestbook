@@ -22,7 +22,6 @@ class guestBookController {
         $inputName = htmlspecialchars($_POST['inputName']);
 
         $aPost = new post($inputTitle, $inputDate, $inputContent, $inputName);
-        //var_dump($aPost);
 
         $guestBook = new guestBook();
         $guestBook->loadPosts();
